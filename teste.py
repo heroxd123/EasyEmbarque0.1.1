@@ -1,2 +1,2 @@
 # testando
-pint('So bora!')
+print('So bora!')
