@@ -1,0 +1,10 @@
+import Pessoa
+
+
+class Representante:
+    def __init__(self):
+        self.id = "666666"
+        self.codigo = "1515"
+        self.nome = "joao"
+        self.comissao =
+
