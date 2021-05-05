@@ -5,3 +5,6 @@ class Pessoa():
         self.sexo = "Masculino"
         self.telefone = "62 9 9474-4589"
 
+    def calcula_idade(self, idade):
+        self.idade = 19
+        print(self.idade)
