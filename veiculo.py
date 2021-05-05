@@ -4,6 +4,7 @@ class Veiculo:
         self.capacidade_passageiros = 42
         self.velocidade = 0
         self.numero_rodas = 0
+        self.categoria = "Onibûs"
 
     def aumentar_velocidade(self, velocidade):
         self.velocidade += velocidade
