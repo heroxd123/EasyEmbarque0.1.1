@@ -1,3 +1,7 @@
 from motorista import Motorista
 
-moto1 = Pessoa
+motorista = Motorista("A", "Tuezin")
+motorista2 = Motorista("B", "Macacão")
+
+motorista.verificar_cnh()
+motorista2.verificar_cnh()
