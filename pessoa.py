@@ -1,9 +1,19 @@
+
 class Pessoa:
-    def __init__(self):
-        self.nome = "Caboco"
-        self.ano_nascimento = 1999
-        self.sexo = "Masculino"
-        self.telefone = "62 9 9474-4589"
+    def __init__(self, nome, data_nascimento, sexo, telefone):
+        self.__nome = nome
+        self.__data_nascimento = data_nascimento
+        self.__sexo = sexo
+        self.__telefone = telefone
+
+    @property
+    def nome(self):
+        return self.__nome
+
+    @property
+    def data_nascimento(self):
+        return self.__data_nascimento
+
 
     def calcula_idade(self, idade):
         self.idade = 19

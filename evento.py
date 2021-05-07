@@ -1,6 +1,7 @@
-import Excursao
 
-
-class Evento(Excursao):
-    def __del__(self, data, ingresso):
-        self.data = "20/11/2019"
+class Evento:
+    def __init__(self, data, nome, preco_ingresso, lote):
+        self.data = data
+        self.nome = nome
+        self.preco_ingresso = preco_ingresso
+        self.lote = lote
