@@ -22,3 +22,4 @@ class Pessoa:
         ano_n = int(self.__data_nascimento[6:10])
         idade = ano_atual - ano_n
         print("A idade da {} e {}".format(self.nome,idade))
+
