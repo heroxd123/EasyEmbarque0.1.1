@@ -2,7 +2,7 @@ import sqlite3
 
 banco = sqlite3.connect('pessoa.db')
 cursor = banco.cursor()
-cursor.execute("CREATE TABLE pessoa (nome text, data_nascimento text, sexo text, telefone text)")
+cursor.execute("CREATE TABLE pessoa (rg integer,nome text, data_nascimento text, sexo text, telefone text)")
 
 #   cursor.execute("INSERT INTO pessoa VALUES('2','16-06-2021','TF Ubuntu','70','Primeiro')")
 
