@@ -1,8 +1,10 @@
 import sqlite3
 
-banco = sqlite3.connect('bd_evento.db')
+banco = sqlite3.connect('pessoa.db')
 cursor = banco.cursor()
-cursor.execute("INSERT INTO evento VALUES('2','16-06-2021','TF Ubuntu','70','Primeiro')")
+cursor.execute("CREATE TABLE pessoa (nome text, data_nascimento text, sexo text, telefone text)")
+
+#   cursor.execute("INSERT INTO pessoa VALUES('2','16-06-2021','TF Ubuntu','70','Primeiro')")
 
 banco.commit()
 
