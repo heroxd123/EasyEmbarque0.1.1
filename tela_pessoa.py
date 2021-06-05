@@ -16,18 +16,14 @@ class Tela_Pessoa:
 
         self.button, self.values = janela.Read()
 
-    def Iniciar_pessoa(self):
+    def registrar_pessoa(self):
         rg = self.values['rg']
         nome = self.values['nome']
         data_nascimento = self.values['data_nascimento']
         sexo = self.values['sexo']
         telefone = self.values['telefone']
-        values = Pessoa
-        Pessoa.calcula_idade(self)
-        print(f'nome: {nome}')
-
-
-
+        pessoa = Pessoa(rg, nome, data_nascimento, sexo, telefone)
+        pessoa.db_regitrar_pessoa()
 
 tela = Tela_Pessoa()
-tela.Iniciar_pessoa()
+tela.registrar_pessoa()

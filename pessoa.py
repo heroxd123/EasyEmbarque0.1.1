@@ -2,7 +2,8 @@ import sqlite3
 
 
 class Pessoa:
-    def __init__(self, nome, data_nascimento, sexo, telefone):
+    def __init__(self, rg, nome, data_nascimento, sexo, telefone):
+        self.__rg = rg
         self.__nome = nome
         self.__data_nascimento = data_nascimento
         self.__sexo = sexo
@@ -11,6 +12,13 @@ class Pessoa:
     @property
     def nome(self):
         return self.__nome
+
+    @nome.setter
+    def nome(self, nome):
+        self.__nome = nome
+
+    def data_nascimento(self, data_nascimento):
+        self.__data_nascimento = data_nascimento
 
     @property
     def data_nascimento(self):
@@ -26,6 +34,6 @@ class Pessoa:
         banco = sqlite3.connect('pessoa.db')
         cursor = banco.cursor()
         cursor.execute(
-            "INSERT INTO pessoa VALUES('" + self.__nome + ',' + self.__data_nascimento + ',' + self.__sexo + ',' + self.__telefone + "')")
+            "INSERT INTO pessoa VALUES('"+self.__rg+"','"+self.__nome+"','"+ self.__data_nascimento+"','"+self.__sexo+"','"+ self.__telefone+"')")
         banco.commit()
         print("Deu bom jacaré")

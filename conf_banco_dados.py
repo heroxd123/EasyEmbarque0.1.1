@@ -2,8 +2,9 @@ import sqlite3
 
 banco = sqlite3.connect('pessoa.db')
 cursor = banco.cursor()
-cursor.execute("CREATE TABLE pessoa (rg integer,nome text, data_nascimento text, sexo text, telefone text)")
-
+cursor.execute("DELETE from pessoa WHERE nome = '{nome}'")
+#  cursor.execute("CREATE TABLE pessoa (rg integer,nome text, data_nascimento text, sexo text, telefone text)")
+#  cursor.execute("INSERT INTO pessoa VALUES('634564','Agenaldo','17-06-1978','Masculino','62 9 9744-5834')")
 #   cursor.execute("INSERT INTO pessoa VALUES('2','16-06-2021','TF Ubuntu','70','Primeiro')")
 
 banco.commit()
@@ -12,7 +13,7 @@ banco.commit()
 #  except sqlite3.Error as erro:
 #  print("Erro ao excluir",erro)
 #  cursor.execute("CREATE TABLE pessoa (nome text, data_nascimento text, idade integer, sexo text, telefone text)")
-#  cursor.execute("INSERT INTO pessoa VALUES('Agenaldo','17-06-1978',24,'Masculino','62 9 9744-5834')")
+#
 #  cursor.execute("DELETE from pessoa WHERE idade = 20")
 
 
