@@ -7,7 +7,7 @@ class Pessoa:
         self._nome = nome.title()
         self._data_nascimento = data_nascimento
         self._sexo = sexo
-        self.telefone = telefone
+        self._telefone = telefone
 
     @property
     def nome(self):
@@ -36,4 +36,4 @@ class Pessoa:
         cursor.execute(
             "INSERT INTO pessoa VALUES('"+self._rg+"','"+self._nome+"','"+ self._data_nascimento+"','"+self._sexo+"','"+ self._telefone+"')")
         banco.commit()
-        print("Deu bom jacaré")
+        print(self._data_nascimento)
