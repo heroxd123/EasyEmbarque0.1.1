@@ -16,4 +16,5 @@ motorista2 = Motorista("B", "Macacão")
 motorista.verificar_cnh()
 motorista2.verificar_cnh()
 
-pessoa.db_regitrar_pessoa()
+pessoa.nome = "pipoquinha"
+print(pessoa.nome)

@@ -2,6 +2,7 @@ import PySimpleGUI as sg
 from pessoa import Pessoa
 
 class Tela_Pessoa:
+
     def __init__(self):
         layout = [
             [sg.Text('Rg:', size=(15, 0)), sg.Input(size=(10, 0),key='rg')],
@@ -24,6 +25,7 @@ class Tela_Pessoa:
         telefone = self.values['telefone']
         pessoa = Pessoa(rg, nome, data_nascimento, sexo, telefone)
         pessoa.db_regitrar_pessoa()
+
 
 tela = Tela_Pessoa()
 tela.registrar_pessoa()

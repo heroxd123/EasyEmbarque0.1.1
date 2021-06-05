@@ -2,7 +2,8 @@ from pessoa import Pessoa
 
 
 class Motorista(Pessoa):
-    def __init__(self, cnh, apelido):
+    def __init__(self, rg, nome, data_nascimento, sexo, telefone, cnh, apelido):
+        super().__init__(rg, nome, data_nascimento, sexo, telefone)
         self.cnh = cnh
         self.apelido = apelido
 
