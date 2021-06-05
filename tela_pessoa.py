@@ -9,7 +9,8 @@ class Tela_Pessoa:
             [sg.Text('Rg:', size=(15, 0)), sg.Input(size=(10, 0),key='rg')],
             [sg.Text('Nome:', size=(15, 0)), sg.Input(size=(45, 0),key='nome')],
             [sg.Text('*A data deve ter a seguinte estrutura (DD/MM/AAAA)')],
-            [sg.Text('Dt. Nascimento:', size=(15, 0)), sg.CalendarButton('Selecionar', format='%d/%m/%Y', size=(20, 0), target='data_nascimento', key='calendario'), sg.Input(size=(15, 0), key='data_nascimento')],
+            [sg.Text('Dt. Nascimento:', size=(15, 0)), sg.CalendarButton('Selecionar', format='%d/%m/%Y', size=(20, 0)
+             , target='data_nascimento', key='calendario'), sg.Input(size=(15, 0), key='data_nascimento')],
             [sg.Text('Sexo:', size=(15, 0)), sg.Combo(['Masculino', 'Feminino'], key='sexo')],
             [sg.Text('Telefone:', size=(15, 0)), sg.Input(size=(20, 0), key='telefone')],
             [sg.Button('Enviar'), sg.Button('Cancelar')]
@@ -19,7 +20,7 @@ class Tela_Pessoa:
         janela = sg.Window("Dados Pessoais").layout(layout)
         self.button, self.values = janela.Read()
 
-    def registrar_pessoa(self):
+    def cadastrar_pessoa(self):
         rg = self.values['rg']
         nome = self.values['nome']
         data_nascimento = self.values['data_nascimento']
@@ -30,4 +31,4 @@ class Tela_Pessoa:
 
 
 tela = Tela_Pessoa()
-tela.registrar_pessoa()
+tela.cadastrar_pessoa()

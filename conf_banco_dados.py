@@ -1,9 +1,9 @@
 import sqlite3
 
-banco = sqlite3.connect('pessoa.db')
+banco = sqlite3.connect('representante.db')
 cursor = banco.cursor()
-cursor.execute("DELETE from pessoa WHERE nome = '{nome}'")
-#  cursor.execute("CREATE TABLE pessoa (rg integer,nome text, data_nascimento text, sexo text, telefone text)")
+#   cursor.execute("DELETE from pessoa WHERE sexo = 'Feminino'")
+cursor.execute("CREATE TABLE representante (codigo integer, rg integer,nome text, data_nascimento text, sexo text, telefone text, comissao real)")
 #  cursor.execute("INSERT INTO pessoa VALUES('634564','Agenaldo','17-06-1978','Masculino','62 9 9744-5834')")
 #   cursor.execute("INSERT INTO pessoa VALUES('2','16-06-2021','TF Ubuntu','70','Primeiro')")
 
