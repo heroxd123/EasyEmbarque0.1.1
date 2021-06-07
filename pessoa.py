@@ -37,3 +37,21 @@ class Pessoa:
             "INSERT INTO pessoa VALUES('"+self._rg+"','"+self._nome+"','"+ self._data_nascimento+"','"+self._sexo+"','"+ self._telefone+"')")
         banco.commit()
         print(self._data_nascimento)
+
+    def consulta_pessoa(banco, sql):
+#        try:
+            banco = sqlite3.connect('pessoa.db')
+            cursor = banco.cursor()
+            cursor.execute(sql)
+            resultado = cursor.fetchall()
+            print("Registro Atualizado")
+            return resultado
+
+
+
+#        except Erro as ex:
+#            print(ex)
+#        finally:
+
+
+
