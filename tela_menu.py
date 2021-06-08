@@ -3,6 +3,7 @@ import PySimpleGUI as sg
 class Tela_Menu:
 
     def __init__(self):
+        sg.theme('Light Brown 1')
         layout = [
         [sg.Text('Selecionar Opção'), sg.Input(key="campo")],
         [sg.Text('broca'), sg.Input('pao com feijao', key='larica')],

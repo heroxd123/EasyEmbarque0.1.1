@@ -5,6 +5,7 @@ class Tela_Representante:
     #       format='%d/%m/%Y'
 
     def __init__(self):
+        sg.theme('Light Brown 1')
         layout = [
             [sg.Text('Código:', size=(15, 0)), sg.Input(size=(5, 0), key='codigo')],
             [sg.Text('Rg:', size=(15, 0)), sg.Input(size=(10, 0),key='rg')],

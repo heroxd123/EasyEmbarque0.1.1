@@ -4,14 +4,15 @@ from evento import Evento
 
 class Tela_Evento:
     def __init__(self):
+        sg.theme('Light Brown 1')
         layout = [
             [sg.Text('Nome do Evento:', size=(15, 0)), sg.Input(size=(20, 0), key='nome')],
             [sg.Text('Codigo do Evento:', size=(15, 0)), sg.Input(size=(10, 0), key='id')],
-            [sg.Text('Ingresso:', size=(15, 0)), sg.Input(size=(15, 0), key='ingresso')],
             [sg.Text('Data do evento:', size=(15, 0)), sg.CalendarButton('Selecionar', format='%d/%m/%Y', size=(20, 0)
             , target='data', key='calendario'),
              sg.Input('DD/MM/AAAA', size=(15, 0), key='data')],
-            [sg.Text('Lote:', size=(15, 0)), sg.Combo(['Promocional', 'Primeiro', 'Segundo'], key='lote')],
+            [sg.Text('Lote:', size=(15, 0)), sg.Combo(['Promocional', 'Primeiro', 'Segundo'], key='lote'),
+             sg.Text('Preço do Ingresso:', size=(15, 0)), sg.Input(size=(5, 0), key='ingresso')],
             [sg.Button('Enviar')]
         ]
 
