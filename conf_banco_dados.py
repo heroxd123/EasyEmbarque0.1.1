@@ -2,11 +2,9 @@ import sqlite3
 
 banco = sqlite3.connect('representante.db')
 cursor = banco.cursor()
-
-cursor.execute("CREATE TABLE representante (codigo integer, rg integer,nome text, data_nascimento text, sexo text,telefone text, comissao integer)")
-
-
+cursor.execute("CREATE TABLE evento (id text, data text, nome text, preco integer, lote text)")
 banco.commit()
+print("Banco evento criado com sucesso...")
 
 #  cursor.execute("CREATE TABLE evento (id integer primary key, data text,nome text,preco_ingresso real,lote text)")
 #  except sqlite3.Error as erro:

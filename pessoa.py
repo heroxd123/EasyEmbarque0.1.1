@@ -36,7 +36,7 @@ class Pessoa:
         cursor.execute(
             "INSERT INTO pessoa VALUES('"+self._rg+"','"+self._nome+"','"+ self._data_nascimento+"','"+self._sexo+"','"+ self._telefone+"')")
         banco.commit()
-        print(self._data_nascimento)
+        print("Cadastrado com sucesso...")
 
     def consulta_pessoa(banco, sql):
 #        try:
