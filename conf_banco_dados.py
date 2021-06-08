@@ -1,8 +1,8 @@
 import sqlite3
 
-banco = sqlite3.connect('representante.db')
+banco = sqlite3.connect('evento.db')
 cursor = banco.cursor()
-cursor.execute("CREATE TABLE evento (id text, data text, nome text, preco integer, lote text)")
+cursor.execute("CREATE TABLE evento(id text, data text, nome text, preco integer, lote text)")
 banco.commit()
 print("Banco evento criado com sucesso...")
 
