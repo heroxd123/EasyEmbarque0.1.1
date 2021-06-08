@@ -7,7 +7,7 @@ class Tela_Evento:
         layout = [
             [sg.Text('Nome do Evento:', size=(15, 0)), sg.Input(size=(20, 0), key='nome')],
             [sg.Text('Codigo do Evento:', size=(15, 0)), sg.Input(size=(10, 0), key='id')],
-            [sg.Text('Ingresso:', size=(15, 0)), sg.Input(size=(15, 0), key='ingresso')],
+            [sg.Text('Preço do ingresso:', size=(15, 0)), sg.Input(size=(15, 0), key='ingresso')],
             [sg.Text('Data do evento:', size=(15, 0)), sg.CalendarButton('Selecionar', format='%d/%m/%Y', size=(20, 0)
             , target='data', key='calendario'),
              sg.Input('DD/MM/AAAA', size=(15, 0), key='data')],
