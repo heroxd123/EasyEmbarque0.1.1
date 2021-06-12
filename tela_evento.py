@@ -13,7 +13,7 @@ class Tela_Evento:
              sg.Input('DD/MM/AAAA', size=(15, 0), key='data')],
             [sg.Text('Lote:', size=(15, 0)), sg.Combo(['Promocional', 'Primeiro', 'Segundo'], key='lote')],
             [ sg.Text('Preço do Ingresso:', size=(15, 0)), sg.Input(size=(5, 0), key='ingresso')],
-            [sg.Button('Enviar')]
+            [sg.Button('Enviar')],
         ]
 
         janela = sg.Window('Dados do Evento').layout(layout)
