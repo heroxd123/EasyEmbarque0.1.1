@@ -9,7 +9,7 @@ class Tela_Venda:
      radio_choices = ['Ingresso+Excursão', 'Excursão']
      layout = [
          [sg.Text("Informe seu Rg:", size =(11,0)), sg.Input(size=(6, 0), key='rg')],
-         [sg.Text("Selecione a opção desejada")],
+         [sg.Text("Selecione  opção desejada:")],
          [sg.Radio(text, 1)for text in radio_choices],
          [sg.Text("Selecione o evento que deseja realizar a compra", size=(18,0 )), sg.Combo(['Zuvuya', 'Universo Paralello', 'Boom Festival'], key='evento')],
          [sg.Text("Valor:", size=(4,0)), sg.Input(size=(5,0), key='valor')],
