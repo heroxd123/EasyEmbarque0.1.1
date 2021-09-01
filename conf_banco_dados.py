@@ -1,10 +1,56 @@
 import sqlite3
+from sqlite3 import Error
 
-banco = sqlite3.connect('evento.db')
-cursor = banco.cursor()
-cursor.execute("CREATE TABLE evento(id text, data text, nome text, preco integer, lote text)")
-banco.commit()
-print("Banco evento criado com sucesso...")
+#   Criar Conexão com o banco de dados
+def conexao_banco():
+    caminho="C:\\EasyEmbarque0.1.1\\evento.db"
+    cone=None
+    try:
+        cone=sqlite3.connect(caminho)
+    except Error as ex:
+        print(ex)
+    return cone
+
+vcon=conexao_banco()
+
+def criar_tabela(conexao,sql):
+
+    try:
+        cursor = conexao.cursor()
+        cursor.execute(sql)
+        print("Tabela criado com sucesso, só bora!!!!")
+
+    except Error as ex:
+        print(ex)
+
+#   Criar Tabela
+
+vsql="""CREATE TABLE evento(
+    id_evento INTEGER PRIMARY KEY AUTOINCREMENT, 
+    data VARCHAR(10),
+    nome VARCHAR(30),
+    preco INTEGER VARCHA;R(6),
+    lote VARCHAR(15)    
+    );"""
+
+criar_tabela(vcon,vsql)
+vcon.close()
+
+def consulta():
+
+    banco = sqlite3.connect('evento.db')
+    cursor = banco.cursor()
+    cursor.execute("CREATE TABLE evento(id text, data text, nome text, preco integer, lote text)")
+    resultado=cursor.fatchall()
+    return resultado
+
+vsql="SELECT * pessoa"
+
+#   banco = sqlite3.connect('evento.db')
+#   cursor = banco.cursor()
+#   cursor.execute("CREATE TABLE evento(id text, data text, nome text, preco integer, lote text)")
+#   banco.commit()
+#   print("Banco evento criado com sucesso...")
 
 #  cursor.execute("CREATE TABLE evento (id integer primary key, data text,nome text,preco_ingresso real,lote text)")
 #  except sqlite3.Error as erro:

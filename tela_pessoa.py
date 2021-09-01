@@ -5,7 +5,6 @@ class Tela_Pessoa:
     #       format='%d/%m/%Y'
 
     def __init__(self):
-        sg.theme('Light Brown 1')
         layout = [
             [sg.Text('Rg:', size=(15, 0)), sg.Input(size=(10, 0),key='rg')],
             [sg.Text('Nome:', size=(15, 0)), sg.Input(size=(45, 0),key='nome')],
